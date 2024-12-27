@@ -8,13 +8,15 @@ namespace Modificatorse.d.z
     {
         static void Main(string[] args)
         {
-            Phone phone = new Phone();
-            
-            Console.WriteLine("Бренд: "+phone.GetBrand);
-            Console.WriteLine("Уровень заряда: "+phone.GetBatteryLevel+"%");
-            phone.TurnOn();
-            phone.Charge(26);
-            
+           ElectronicDevice electronicDevice = new ElectronicDevice("Electronic Device",34,false);
+           Phone phone = new Phone();
+           Console.WriteLine(phone.GetBrand);
+           Console.WriteLine(phone.GetBatteryLevel);
+           phone.TurnOn();
+           phone.Charge(65);
+
+
+
         }
     }
 }

@@ -3,9 +3,12 @@ namespace Modificatorse.d.z
 {
     class ElectronicDevice
     {
-        private string Brand;
-        protected int BatteryLevel;
-        private bool IsOn;
+        private string Brand ;
+        protected int BatteryLevel; 
+        private bool IsOn ;
+
+        
+       
         
 
         public string GetBrand
@@ -25,33 +28,40 @@ namespace Modificatorse.d.z
             get { return IsOn; }
             set { IsOn = value; }
         }
+        public ElectronicDevice(string Brand, int BatteryLevel, bool IsOn)
+        {
+            this.Brand = Brand;
+            this.BatteryLevel = BatteryLevel;
+            this.IsOn = IsOn;
+        
+        }
+
+        
+
 
         public void TurnOn()
         {
-            IsOn = true;
-            Console.WriteLine(Brand+" Is Turned On");
+            
+            Console.WriteLine(Brand + " Is Turned On");
         }
 
         public void TurnOff()
         {
-            IsOn = false;
-            Console.WriteLine(Brand + "Is Turned Off");
+         
+            Console.WriteLine(Brand + " Is Turned Off");
         }
 
         public void Charge(int amount)
         {
-            GetBatteryLevel+=amount;
+            GetBatteryLevel += amount;
             if (GetBatteryLevel >= 100)
             {
-                GetBatteryLevel=100;
-                Console.WriteLine("Устройство заряжен до "+GetBatteryLevel+"%");
+                GetBatteryLevel = 100;
+
             }
+
+            Console.WriteLine("Устройство заряжен до " + GetBatteryLevel + "%");
         }
-            
-        
-        
-
-
     }
-
 }
+

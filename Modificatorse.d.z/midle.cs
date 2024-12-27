@@ -3,20 +3,15 @@ namespace Modificatorse.d.z
 {
     class Phone : ElectronicDevice
     {
-        public Phone()
+        public Phone():base("Phone",34,false) 
         {
-            GetBrand = "IPhone";
-            GetBatteryLevel =86;
-            GetIsOn = GetIsOn;
-
         }
+           
+            
 
-        public Phone(string Brand, int BatteryLevel, bool IsOn)
-        {
-            GetBrand = Brand;
-            GetBatteryLevel = BatteryLevel;
-            GetIsOn = GetIsOn;
-        }
+        
+
+      
         
     }
 }
